@@ -1,0 +1,20 @@
+name: mapscii
+version: '0.1.6'
+summary: The whole world in your console.
+description: |
+  A node.js based Vector Tile to Braille and ASCII renderer for
+  xterm-compatible terminals.
+
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
+
+apps:
+  mapscii:
+    command: mapscii
+    plugs: [network]
+
+parts:
+  mapscii:
+    source: .
+    plugin: nodejs
+    source-tag: 'v0.1.6'
