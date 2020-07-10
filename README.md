@@ -1,4 +1,4 @@
-# MapSCII - The Whole World In Your Console.
+# MapSCII - The Whole World In Your Console. [![Build Status](https://travis-ci.com/rastapasta/mapscii.svg?branch=master)](https://travis-ci.com/rastapasta/mapscii)
 
 A node.js based [Vector Tile](http://wiki.openstreetmap.org/wiki/Vector_tiles) to [Braille](http://www.fileformat.info/info/unicode/block/braille_patterns/utf8test.htm) and [ASCII](https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange) renderer for [xterm](https://en.wikipedia.org/wiki/Xterm)-compatible terminals.
 
@@ -21,18 +21,36 @@ If you're on Windows, use the open source telnet client [PuTTY](https://www.chia
 * Or just use the supplied and optimized [OSM2VectorTiles](https://github.com/osm2vectortiles) based one
 * Work offline and discover local [VectorTile](https://github.com/mapbox/vector-tile-spec)/[MBTiles](https://github.com/mapbox/mbtiles-spec)
 * Compatible with most Linux and OSX terminals
-* Highly optimizied algorithms for a smooth experience
-* 100% pure Coffee-/JavaScript! :sunglasses:
+* Highly optimized algorithms for a smooth experience
+* 100% pure JavaScript! :sunglasses:
+
+## How to run it locally
+
+With a modern node installation available, just start it with
+
+```
+npx mapscii
+```
 
 ## How to install it locally
 
-If you haven't already got Node.js >= version 4.5, then [go get it](http://nodejs.org/).
+### With npm
+
+If you haven't already got Node.js >= version 10, then [go get it](http://nodejs.org/).
 
 ```
 npm install -g mapscii
 ```
 
 If you're on OSX, or get an error about file permissions, you may need to do ```sudo npm install -g mapscii```
+
+### With snap
+
+In any of the [supported Linux distros](https://snapcraft.io/docs/core/install):
+
+    sudo snap install mapscii
+    
+(This snap is maintained by [@nathanhaines](https://github.com/nathanhaines/))
 
 ## Running
 
@@ -46,6 +64,7 @@ mapscii
 
 * Arrows **up**, **down**, **left**, **right** to scroll around
 * Press **a** or **z** to zoom in and out
+* Press **c** to switch to block character mode
 * Press **q** to quit
 
 ## Mouse control
@@ -68,7 +87,7 @@ If your terminal supports mouse events you can drag the map and use your scroll 
 #### Juggling the vectors and numbers
 * [`earcut`](https://github.com/mapbox/earcut) for polygon triangulation
 * [`rbush`](https://github.com/mourner/rbush) for 2D spatial indexing of geo and label data
-* [`breseham`](https://github.com/madbence/node-bresenham) for line point calculations
+* [`bresenham`](https://github.com/madbence/node-bresenham) for line point calculations
 * [`simplify-js`](https://github.com/mourner/simplify-js) for polyline simplifications
 
 #### Handling the flow
@@ -90,7 +109,6 @@ If your terminal supports mouse events you can drag the map and use your scroll 
   * [ ] mouse control
     * [ ] hover POIs/labels
     * [ ] hover maybe even polygons/-lines?
-    * [ ] zoom into mouse pos
 
 * Styler
   * [ ] respect zoom based style ranges
@@ -122,13 +140,5 @@ You are free to copy, distribute, transmit and adapt our data, as long as you cr
 The cartography in our map tiles, and our documentation, are licenced under the [Creative Commons Attribution-ShareAlike 2.0](http://creativecommons.org/licenses/by-sa/2.0/) licence (CC BY-SA).
 
 ### MapSCII
-
-#### The MIT License (MIT)
-
-Copyright (c) 2017 Michael Straßburger
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+* [License](./LICENSE)
+* [Authors](./AUTHORS)

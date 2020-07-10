@@ -1,5 +1,5 @@
 /*#
-  mapscii - Terminal Map Viewer
+  MapSCII - Terminal Map Viewer
   by Michael Strassburger <codepoet@cpan.org>
   Discover the planet in your console!
 
@@ -7,9 +7,11 @@
 
   TODO: params parsing and so on
 #*/
-require('coffee-script/register');
-
+'use strict';
 const Mapscii = require('./src/Mapscii');
 
-mapscii = new Mapscii();
-mapscii.init();
+const mapscii = new Mapscii();
+mapscii.init().catch((err) => {
+  console.error('Failed to start MapSCII.');
+  console.error(err);
+});

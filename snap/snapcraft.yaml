@@ -1,5 +1,5 @@
 name: mapscii
-version: '0.1.6'
+version: '0.3.1'
 summary: The whole world in your console.
 description: |
   A node.js based Vector Tile to Braille and ASCII renderer for
@@ -17,4 +17,4 @@ parts:
   mapscii:
     source: .
     plugin: nodejs
-    source-tag: 'v0.1.6'
+    source-tag: 'v0.3.1'
