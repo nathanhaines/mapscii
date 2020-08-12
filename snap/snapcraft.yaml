@@ -17,6 +17,6 @@ apps:
 parts:
   mapscii:
     source: .
-    plugin: nodejs
+    plugin: npm
     nodejs-version: '9.11.2'
     source-tag: 'v0.3.1'

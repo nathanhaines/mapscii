@@ -5,8 +5,7 @@
   "main": "main.js",
   "scripts": {
     "lint": "eslint src",
-    "start": "node main",
-    "test": "jest"
+    "start": "node main"
   },
   "repository": {
     "type": "git",
@@ -16,7 +15,7 @@
     "mapscii": "./bin/mapscii.sh"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=8"
   },
   "keywords": [
     "map",
@@ -45,8 +44,6 @@
     "x256": "0.0.2"
   },
   "devDependencies": {
-    "eslint": "^7.0.0",
-    "eslint-plugin-jest": "^23.13.1",
-    "jest": "^26.0.1"
+    "eslint": "^6.8.0"
   }
 }
