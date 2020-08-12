@@ -7,14 +7,16 @@ description: |
 
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
+base: core20
 
 apps:
   mapscii:
-    command: mapscii
+    command: bin/mapscii
     plugs: [network]
 
 parts:
   mapscii:
     source: .
-    plugin: nodejs
+    plugin: npm
+    npm-node-version: '14.8.0'
     source-tag: 'v0.3.1'
