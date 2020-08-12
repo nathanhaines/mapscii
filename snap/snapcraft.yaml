@@ -9,9 +9,6 @@ grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
 base: core18
 
-architectures:
-  - build-on: i386
-
 apps:
   mapscii:
     command: bin/mapscii
