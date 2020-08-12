@@ -7,7 +7,10 @@ description: |
 
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
-base: core20
+base: core18
+
+architectures:
+  - build-on: i386
 
 apps:
   mapscii:
@@ -17,6 +20,6 @@ apps:
 parts:
   mapscii:
     source: .
-    plugin: npm
-    npm-node-version: '14.8.0'
+    plugin: nodejs
+    nodejs-version: '14.8.0'
     source-tag: 'v0.3.1'
